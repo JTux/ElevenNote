@@ -18,6 +18,7 @@ namespace ElevenNote.Models
 
         [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
+
         public override string ToString() => $"[{NoteID}] {Title}";
     }
 }

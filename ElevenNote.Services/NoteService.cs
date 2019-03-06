@@ -49,7 +49,7 @@ namespace ElevenNote.Services
                                     NoteID = e.NoteID,
                                     Title = e.Title,
                                     IsStarred = e.IsStarred,
-                                    CreatedUtc = e.CreatedUtc,
+                                    CreatedUtc = e.CreatedUtc
                                 }
                         );
                 return query.ToArray();
@@ -78,7 +78,7 @@ namespace ElevenNote.Services
 
         public bool UpdateNote(NoteEdit model)
         {
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx

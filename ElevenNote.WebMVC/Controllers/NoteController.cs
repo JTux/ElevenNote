@@ -15,13 +15,13 @@ namespace ElevenNote.WebMVC.Controllers
         // GET: Note
         public ActionResult Index()
         {
-            var userID = Guid.Parse(User.Identity.GetUserId());
-            var service = new NoteService(userID);
+            var service = CreateNoteService();
             var model = service.GetNotes();
 
             return View(model);
         }
 
+        //Returns Create View
         public ActionResult Create()
         {
             return View();
